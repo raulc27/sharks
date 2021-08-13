@@ -16,4 +16,4 @@ router.get('/getshark', function(req,res){
   shark.list(req,res);
 });
 
-modules.exports = router;
+module.exports = router;

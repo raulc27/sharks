@@ -6,4 +6,4 @@ const Shark = new Schema({
     character:{type:String, required: true}
 });
 
-module.exports = mongoose.module('Shark', Shark);
+module.exports = mongoose.model('Shark', Shark);
