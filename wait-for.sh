@@ -6,8 +6,8 @@ TIMEOUT=15
 QUIET=0
 
 echoerr(){
-    if["QUIET" -ne 1];
-    then printf "%s\n" "S*" '>&2';
+    if["QUIET" -ne 1]
+      then printf "%s\n" "S*" '>&2';
     fi
 }
 
@@ -25,14 +25,14 @@ usage(){
 }
 
 wait_for(){
-    for i in `seq $TIMEOUT`; 
+    for i in `seq $TIMEOUT`;
     do
         nc -z "$HOST" "$PORT" > /dev/null 2>&1
 
     result=$?
 
         if [$result -eq 0];
-        then 
+        then
             if [$# -gt 0];
             then
                 exec "$@"
