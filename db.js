@@ -16,6 +16,7 @@ const {
 } = process.env;
 
 const options = {
+    useUnifiedTopology: true,
     useNewUrlParser: true,
     reconnectTries: Number.MAX_VALUE,
     reconnectInternal: 500,
