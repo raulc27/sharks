@@ -44,9 +44,9 @@ spec:
                   name: env
             - name: MONGO_PASSWORD
               valueFrom:
-                configMapKeyRef:
+                secretKeyRef:
                   key: MONGO_PASSWORD
-                  name: env
+                  name: mongo-secret
             - name: MONGO_PORT
               valueFrom:
                 configMapKeyRef:
@@ -54,9 +54,9 @@ spec:
                   name: env
             - name: MONGO_USERNAME
               valueFrom:
-                configMapKeyRef:
+                secretKeyRef:
                   key: MONGO_USERNAME
-                  name: env
+                  name: mongo-secret
           image: raulc27/nodejs-sharks-image-demo
           name: nodejs
           ports:
